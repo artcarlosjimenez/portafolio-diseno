@@ -13,6 +13,13 @@
 
 <div class="scanlines"></div>
 <div class="grain"></div>
+<div class="vignette"></div>
+<div class="streak-field" aria-hidden="true">
+  <span class="streak streak-1"></span>
+  <span class="streak streak-2"></span>
+  <span class="streak streak-3"></span>
+  <span class="streak streak-4"></span>
+</div>
 
 <div class="frame-corner fc-tl"></div>
 <div class="frame-corner fc-tr"></div>
@@ -34,8 +41,24 @@
   </ul>
 </nav>
 
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-kicker">— Menu</div>
+    <a href="#about" data-idx="00">About</a>
+    <a href="#layers" data-idx="01">Skills</a>
+    <a href="#timeline" data-idx="02">Timeline</a>
+    <a href="#reel" data-idx="03">Work</a>
+    <a href="#contact" data-idx="04">Contact</a>
+  </div>
+</div>
+
 <!-- ================= HERO ================= -->
 <header class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-kicker">Guatemala City · Available for freelance &amp; full-time roles</div>
     <h1>CARLOS<br><span>JIMÉNEZ</span></h1>
@@ -45,7 +68,7 @@
       for studios, agencies and universities across Guatemala and beyond.
     </p>
     <div class="hero-cta">
-      <a class="btn primary" href="https://vimeo.com/cjimenezilustrador" target="_blank" rel="noopener">▶ Watch reel</a>
+      <a class="btn primary" href="https://vimeo.com/cjimenezsrdg" target="_blank" rel="noopener">▶ Watch reel</a>
       <a class="btn" href="https://behance.net/cjimenez" target="_blank" rel="noopener">View Behance ↗</a>
       <a class="btn" href="#contact">Get in touch</a>
     </div>
@@ -266,11 +289,13 @@
 
 <!-- ================= WORK / REEL ================= -->
 <section id="reel">
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow">03 — Output</div>
     <h2>See it move.</h2>
     <div class="reel-grid">
-      <a class="reel-card reveal" href="https://vimeo.com/cjimenezilustrador" target="_blank" rel="noopener">
+      <a class="reel-card reveal" href="https://vimeo.com/cjimenezsrdg" target="_blank" rel="noopener">
         <div class="reel-top">
           <span class="reel-tag">MOTION REEL</span>
           <span class="reel-play">▶</span>
@@ -279,7 +304,7 @@
           <div class="reel-title">Vimeo</div>
           <div class="reel-desc">Animation, compositing and motion graphics work in motion.</div>
         </div>
-        <div class="reel-link">vimeo.com/cjimenezilustrador ↗</div>
+        <div class="reel-link">vimeo.com/cjimenezsrdg ↗</div>
       </a>
       <a class="reel-card reveal" href="https://behance.net/cjimenez" target="_blank" rel="noopener">
         <div class="reel-top">
@@ -338,7 +363,7 @@
         <div><span>Phone</span><span>+502 5104 2194</span></div>
         <div><span>Location</span><span>Guatemala City, Guatemala</span></div>
         <div><span>Behance</span><span>/cjimenez</span></div>
-        <div><span>Vimeo</span><span>/cjimenezilustrador</span></div>
+        <div><span>Vimeo</span><span>/cjimenezsrdg</span></div>
       </div>
     </div>
   </div>

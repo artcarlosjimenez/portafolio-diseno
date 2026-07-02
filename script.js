@@ -1,3 +1,42 @@
+  // hamburger menu (mobile)
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+    if(!toggle || !menu) return;
+
+    var links = menu.querySelectorAll('a');
+
+    function openMenu(){
+      menu.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      document.body.classList.add('menu-open');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      document.body.classList.remove('menu-open');
+    }
+
+    toggle.addEventListener('click', function(){
+      if(menu.classList.contains('open')){ closeMenu(); } else { openMenu(); }
+    });
+
+    links.forEach(function(link){
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+
+    // close automatically if the viewport is resized back to desktop
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 640) closeMenu();
+    });
+  })();
+
   // running timecode in the HUD, cosmetic — like a scrubbing playhead
   (function(){
     var el = document.getElementById('timecode');
